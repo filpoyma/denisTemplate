@@ -108,7 +108,7 @@ export const template = (tableData: string[]) => {
 
 
 ${tableData
-  .filter((item) => item[0])
+  .filter((item) => item[0] !== null)
   .map((item) => {
     return `<div style="height: 20px"></div>
     <div class="item" data-num="${item[0]}">
@@ -117,18 +117,18 @@ ${tableData
   })}
 
 ${tableData
-  .filter((item) => item[0])
+  .filter((item) => item[0] !== null)
   .map((item) => {
     return `<div class="fullitem" id="full${item[0]}">
       <div class="fullimg"><img src="" /></div>
       <div class="fulname">
-        <p class="c4"><span class="c0">${item[2]}</span></p>
-        <p class="c4"><span class="c0">${item[3]}</span></p>
-        <p class="c4"><span class="c0">${item[4]}</span></p>
-        <p class="c4"><span class="c0">${item[5]}</span></p>
-        <p class="c4"><span class="c0">${item[7]}</span></p>
+        <p class="c4"><span class="c0">${item[2] || ""}</span></p>
+        <p class="c4"><span class="c0">${item[3] || ""}</span></p>
+        <p class="c4"><span class="c0">${item[4] || ""}</span></p>
+        <p class="c4"><span class="c0">${item[5] || ""}</span></p>
+        <p class="c4"><span class="c0">${item[7] || ""}</span></p>
         <p class="c4">
-          <span class="c0">${item[18]}</span>
+          <span class="c0">${item[18] || ""}</span>
         </p>
       </div>
     </div>`;
