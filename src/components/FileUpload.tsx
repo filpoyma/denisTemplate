@@ -40,7 +40,7 @@ const FileUploadComponent: React.FC = () => {
 
   return (
     <div className="file-upload-component">
-      <h2>Upload your files</h2>
+      <h2>HTML from XLSX</h2>
       <p>fast and easy way</p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="file-upload" className="custom-file-upload">
@@ -48,8 +48,9 @@ const FileUploadComponent: React.FC = () => {
         </label>
         <input id="file-upload" type="file" onChange={handleFileChange} />
         <br />
+        {!!selectedFile && <p>{selectedFile.name}</p>}
         <button type="submit" className="submit-button">
-          Submit
+          Convert
         </button>
       </form>
     </div>
