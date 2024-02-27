@@ -24,16 +24,14 @@ const FileUploadComponent: React.FC = () => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (selectedFile) {
-      // Handle file submission, e.g. uploading to a server
-      // console.log("file-FileUpload.tsx selectedFile:", selectedFile);
       readXlsxFile(selectedFile)
         .then((rows: any) => {
-          console.log("file-FileUpload.tsx rows:", rows);
           const html = template(rows);
           downloadTxtFile(html);
         })
         .catch((error) => {
           console.error("file-FileUpload.tsx error:", error);
+          alert("Wrong file format. File must be .xlsx");
         });
     } else {
       alert("No file selected");
