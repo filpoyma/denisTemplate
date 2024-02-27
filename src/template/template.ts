@@ -126,9 +126,9 @@ ${tableData
         <p class="c4"><span class="c0">${item[3] || ""}</span></p>
         <p class="c4"><span class="c0">${item[4] || ""}</span></p>
         <p class="c4"><span class="c0">${item[5] || ""}</span></p>
-        <p class="c4"><span class="c0">${item[7] || ""}</span></p>
+        <p class="c4"><span class="c0">${item[6] || ""}</span></p>
         <p class="c4">
-          <span class="c0">${item[18] || ""}</span>
+          <span class="c0">${item[7] || ""}</span>
         </p>
       </div>
     </div>`;
