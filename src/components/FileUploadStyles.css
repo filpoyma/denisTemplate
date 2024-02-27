@@ -1,0 +1,67 @@
+/* FileUploadComponent.css */
+
+.file-upload-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5); /* Slight transparency to see the background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.file-upload-component h2 {
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.file-upload-component p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.custom-file-upload {
+  display: flex; /* Changed to block for better layout inside the flex container */
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px dashed #ccc;
+  /*width: 100%; !* Full width *!*/
+  text-align: center; /* Center the text */
+  justify-content: center;
+}
+
+.custom-file-upload:hover {
+  background-color: #e9e9e9;
+}
+
+#file-upload {
+  display: none;
+}
+
+.submit-button {
+  background-color: #4B3F6B;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Full width */
+}
+
+.submit-button:hover {
+  background-color: #413359;
+}
