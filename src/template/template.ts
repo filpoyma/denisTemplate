@@ -107,15 +107,19 @@ export const template = (tableData: string[]) => {
     </div>
 
 
-${tableData.map((item) => {
-  return `<div style="height: 20px"></div>
+${tableData
+  .filter((item) => item[0])
+  .map((item) => {
+    return `<div style="height: 20px"></div>
     <div class="item" data-num="${item[0]}">
       <div class="img"><img src="images/preview/${item[0]}.jpg" /></div>
     </div>`;
-})}
+  })}
 
-${tableData.map((item) => {
-  return `<div class="fullitem" id="full${item[0]}">
+${tableData
+  .filter((item) => item[0])
+  .map((item) => {
+    return `<div class="fullitem" id="full${item[0]}">
       <div class="fullimg"><img src="" /></div>
       <div class="fulname">
         <p class="c4"><span class="c0">${item[2]}</span></p>
@@ -128,7 +132,7 @@ ${tableData.map((item) => {
         </p>
       </div>
     </div>`;
-})}
+  })}
       
   </body>
   <script>
